@@ -1,73 +1,22 @@
-# React + TypeScript + Vite
+# Proyecto Final: Gestión de Tareas con React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación funcional de "Lista de Tareas" (To-Do List) desarrollada para el diplomado de React. La aplicación permite gestionar el ciclo de vida completo de las tareas conectándose a una API externa.
 
-Currently, two official plugins are available:
+## 🚀 Funcionalidades Implementadas
+- **Visualización**: Listado dinámico de tareas existentes con estilos visuales diferenciados según el estado.
+- **Creación**: Formulario completo para añadir nuevas tareas a la base de datos.
+- **Edición**: Capacidad de modificar el título o la descripción de tareas ya creadas.
+- **Eliminación**: Opción para borrar tareas individuales de forma permanente.
+- **Gestión de Estado**: Selector para alternar tareas entre estado "Pendiente" y "Finalizada".
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tecnologías Utilizadas
+- **React + Vite**: Entorno de desarrollo y librería principal.
+- **Material UI (MUI)**: Framework de componentes para la interfaz de usuario.
+- **Axios**: Cliente HTTP para el consumo de la API.
+- **Zod**: Validación de esquemas para los datos de las tareas.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📦 Instrucciones para Correr el Proyecto
+1. Clonar el repositorio.
+2. Instalar dependencias con `npm install`.
+3. Iniciar el servidor de desarrollo con `npm run dev`.
+4. Para desplegar, usar `npm run deploy`.
